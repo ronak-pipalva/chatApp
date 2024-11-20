@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centered Body</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        position: relative;
+        padding-right: 150px;
+        padding-left: 50px;
+        padding-bottom: 120px;
+        padding-top: 50px;
+        border-style: solid;
+        border-width: 0px;
+        border-color: gray;
+        max-width: 900px;
+        border-radius: 20px;
+        text-align: left;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .img {
+        width: 25%;
+        height: auto;
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .container div {
+        line-height: 28px;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      .container span {
+        font-weight: 400;
+        font-family: Inter, Arial, sans-serif;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: left;
+      }
+
+      .button {
+        background-color: #3e8370;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        width: 300px;
+        border-radius: 7px;
+      }
+
+      .bottom-right-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 110%;
+        height: 700px;
+        margin-left: 200px;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      hr {
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: 80px;
+      }
+
+      .flex-item {
+        flex: 1;
+        margin-bottom: 20px;
+      }
+
+      .flex-item:last-child {
+        margin-right: 0;
+      }
+
+      .flex-item img {
+        width: 24px;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+
+      hr {
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: 80px;
+      }
+
+      @media screen and (max-width: 1550px) {
+        hr {
+          margin-right: 0px;
+        }
+
+        .bottom-right-img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 110%;
+          height: 430px;
+          width: 100%;
+          margin: auto;
+          display: block;
+          right: 0;
+          margin-right: 150px;
+        }
+
+        /* image touch in border */
+
+        /* .bottom-right-img {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 110%;
+                height: 430px;
+                width: 100%;
+                margin: auto;
+                display: block;
+                right: 0;
+                margin-right: 0;
+            } */
+      }
+
+      @media screen and (max-width: 900px) {
+        hr {
+          margin-right: 0px;
+        }
+
+        .flex-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .container {
+          max-width: 100%;
+          padding: 50px;
+          text-align: center;
+        }
+
+        .container div {
+          text-align: center;
+        }
+
+        .img {
+          display: block;
+          margin: 0 auto;
+          max-width: 100%;
+          height: auto;
+        }
+
+        p {
+          width: 450px;
+        }
+
+        .bottom-right-img {
+          position: relative;
+          width: 100%;
+          height: 400px;
+          margin: auto;
+          display: block;
+          right: 120px;
+          bottom: 50px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="con">
+        <div>
+          <span
+            class="center"
+            style="color: #101828; font-size: 30px; font-weight: 600"
+            >Welcome,</span
+          ><span style="color: #3e8370; font-size: 30px; font-weight: 600"
+            ><%= name %></span
+          >
+        </div>
+        <div></div>
+        <div style="margin-bottom: 30px">
+          <a href="<%= url %>" style="text-decoration: none">
+            <button class="button button1">Forget password</button>
+          </a>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="flex-container" style="justify-content: space-between">
+        <div class="flex-item">
+          <div style="line-height: 28px">
+            <img
+              src="https://optimumscreening.s3.us-west-2.amazonaws.com/optimumScreening/upload_portal/Culy6QrN81f6pOtMJVicJaCN0HR7Yk-1713158748960.png"
+              alt="Need Help"
+              height=""
+              width="24"
+              border="0"
+            /><br />
+            <span style="color: #101828; font-weight: 600; font-size: 20px"
+              >Need Help?</span
+            >
+          </div>
+          <p
+            style="
+              color: #8997a9;
+              font-size: 15px;
+              line-height: 24px;
+              margin-top: 25px;
+            "
+          >
+            The most efficient method to reach out to us with any questions or
+            concerns is by sending a message through your applicant
+            dashboard.<br />
+            We promptly address these support messages within the message<br />
+            portal.
+          </p>
+        </div>
+        <div class="flex-item">
+          <div style="line-height: 28px">
+            <img
+              src="https://optimumscreening.s3.us-west-2.amazonaws.com/optimumScreening/upload_portal/UbfIiyaagM5aq460pk7Oo5xfxojdEB-1713159066257.png"
+              alt="Acknowledgement"
+              width="24"
+              border="0"
+            /><br />
+            <span style="color: #101828; font-weight: 600; font-size: 20px"
+              >Acknowledgement</span
+            >
+          </div>
+          <p style="color: #8997a9; font-size: 15px; line-height: 24px">
+            Please keep in mind that the status indicated by InstaShow, Inc is
+            <br />that of your background screening only, and does not provide
+            any<br />
+            other guarantees. Approval of your background screening is based
+            <br />on criteria set forth by your organization.
+          </p>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </body>
+</html>
